@@ -7,10 +7,6 @@ module.exports = {
   },
   extends: [
     'next/core-web-vitals',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
-    'eslint:recommended',
-    'prettier',
   ],
   parser: '@typescript-eslint/parser',
   ignorePatterns: ['tailwind.config.js', '.eslintrc.js', 'next.config.js', 'postcss.config.js'],
