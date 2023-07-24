@@ -10,7 +10,17 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   ignorePatterns: ['tailwind.config.js', '.eslintrc.js', 'next.config.js', 'postcss.config.js'],
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', "testing-library"],
+  overrides: [
+    // Only uses Testing Library lint rules in test files
+    {
+      files: [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      extends: ["plugin:testing-library/react"]
+    }
+  ],
   rules: {
     '@typescript-eslint/semi': ['error', 'always'],
     'react-hooks/rules-of-hooks': 'error',
