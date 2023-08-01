@@ -12,6 +12,7 @@ function MyButton ({ label, backgroundColor = 'red', size = 'md',handleClick}) {
     scale = 1.5;
   }
   const style = {
+
     backgroundColor,
     padding: `${scale * 0.5}rem ${scale}rem`,
     border: `1px solid ${backgroundColor}`,
